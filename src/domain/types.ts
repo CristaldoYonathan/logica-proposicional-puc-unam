@@ -41,4 +41,4 @@ export interface Connector {
   example: string;
 }
 
-export type AppStep = "presentation" | "activity1" | "activity2";
+export type AppStep = "presentation" | "activity1" | "activity2" | "thanks";

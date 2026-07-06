@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, RotateCcw, Send } from "lucide-react";
+import { ArrowLeft, PartyPopper, RotateCcw, Send } from "lucide-react";
 import { useActivity2 } from "@/hooks/useActivity2";
 import TruthTable from "./TruthTable";
 import Button from "@/ui/Button";
@@ -10,9 +10,10 @@ import StepBar from "@/ui/StepBar";
 
 interface Activity2ViewProps {
   onBack: () => void;
+  onComplete: () => void;
 }
 
-export default function Activity2View({ onBack }: Activity2ViewProps) {
+export default function Activity2View({ onBack, onComplete }: Activity2ViewProps) {
   const act = useActivity2();
 
   return (
@@ -49,9 +50,14 @@ export default function Activity2View({ onBack }: Activity2ViewProps) {
             <Send size={16} strokeWidth={2.5} /> Enviar y corregir
           </Button>
         ) : (
-          <Button variant="success" onClick={act.reset}>
-            <RotateCcw size={16} strokeWidth={2.5} /> Reintentar
-          </Button>
+          <>
+            <Button variant="ghost" onClick={act.reset}>
+              <RotateCcw size={16} strokeWidth={2.5} /> Reintentar
+            </Button>
+            <Button variant="success" onClick={onComplete}>
+              <PartyPopper size={16} strokeWidth={2.5} /> Finalizar
+            </Button>
+          </>
         )}
       </ShellFooter>
     </Shell>

@@ -6,11 +6,18 @@ import type { AppStep } from "@/domain/types";
 import PresentationView from "@/features/presentation/PresentationView";
 import Activity1View from "@/features/activity1/Activity1View";
 import Activity2View from "@/features/activity2/Activity2View";
+import ThanksView from "@/features/thanks/ThanksView";
 
 const views: Record<AppStep, (go: (s: AppStep) => void) => React.ReactNode> = {
   presentation: (go) => <PresentationView onStart={() => go("activity1")} />,
   activity1: (go) => <Activity1View onComplete={() => go("activity2")} />,
-  activity2: (go) => <Activity2View onBack={() => go("activity1")} />,
+  activity2: (go) => (
+    <Activity2View
+      onBack={() => go("activity1")}
+      onComplete={() => go("thanks")}
+    />
+  ),
+  thanks: (go) => <ThanksView onRestart={() => go("presentation")} />,
 };
 
 export default function HomePage() {
