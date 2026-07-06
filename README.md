@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lógica Proposicional · PUC UNaM
 
-## Getting Started
+Actividades interactivas de **lógica proposicional** para el **Profesorado Universitario en Computación** de la Universidad Nacional de Misiones.
 
-First, run the development server:
+**Demo en vivo:** [logica-proposicional-puc-unam.vercel.app](https://logica-proposicional-puc-unam.vercel.app)
+
+## Contenido
+
+1. **Presentación** — Conceptos básicos y conectores lógicos (∧, ∨, ¬, ⇒, ↔, ⊻).
+2. **Actividad 1** — Emparejar enunciados en lenguaje natural con expresiones simbólicas. Corrección automática al enviar.
+3. **Actividad 2** — Completar tablas de verdad. Corrección automática al enviar.
+
+## Autoras
+
+Lucrecia Soutus · Daniela Olesnek
+
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando        | Descripción              |
+| -------------- | ------------------------ |
+| `npm run dev`  | Servidor de desarrollo   |
+| `npm run build`| Build de producción      |
+| `npm start`    | Servir build             |
+| `npm run lint` | Linter                   |
 
-## Learn More
+## Stack
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org/) 16
+- [React](https://react.dev/) 19
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide React](https://lucide.dev/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/          # Rutas y layout
+├── domain/       # Datos y tipos
+├── features/     # Vistas por actividad
+├── hooks/        # Lógica de estado
+└── ui/           # Componentes reutilizables
+```
 
-## Deploy on Vercel
+## Licencia
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Proyecto educativo — UNaM · Facultad de Ciencias Exactas, Químicas y Naturales.

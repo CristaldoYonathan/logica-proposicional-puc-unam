@@ -22,7 +22,7 @@ export default function StepBar({ step, label }: StepBarProps) {
           <span className="hidden rounded-full bg-grape-soft px-3 py-1 font-mono text-xs font-semibold text-ink/70 sm:inline">
             p ∧ q
           </span>
-          <h1 className="truncate text-base font-bold tracking-tight sm:text-xl">
+          <h1 className="text-sm font-bold leading-snug tracking-tight sm:text-xl">
             {label}
           </h1>
         </div>

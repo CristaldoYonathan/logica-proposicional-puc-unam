@@ -22,17 +22,20 @@ export default function PresentationView({ onStart }: PresentationViewProps) {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex shrink-0 flex-wrap items-center gap-4 rounded-3xl bg-grape-soft px-5 py-4 shadow-sm sm:px-7 sm:py-6"
+          className="flex shrink-0 flex-col gap-3 rounded-3xl bg-grape-soft px-4 py-4 shadow-sm sm:flex-row sm:items-center sm:gap-4 sm:px-7 sm:py-6"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-grape shadow-sm sm:h-14 sm:w-14">
-            <Brain size={26} strokeWidth={2} />
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-grape shadow-sm sm:h-14 sm:w-14">
+            <Brain className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2} />
           </span>
-          <div className="min-w-0 flex-1">
-            <h1 className="text-xl font-bold tracking-tight sm:text-3xl">
+          <div className="min-w-0 w-full">
+            <h1 className="text-lg font-bold leading-tight tracking-tight sm:text-3xl">
               {presentationMeta.title}
             </h1>
-            <p className="truncate text-xs text-ink/60 sm:text-sm">
-              {presentationMeta.subtitle} · {presentationMeta.authors}
+            <p className="mt-1 text-xs leading-snug text-ink/70 sm:text-sm">
+              {presentationMeta.subtitle}
+            </p>
+            <p className="mt-0.5 text-xs leading-snug text-ink/50 sm:text-sm">
+              {presentationMeta.authors}
             </p>
           </div>
         </motion.div>
